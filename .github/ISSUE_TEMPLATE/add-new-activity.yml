@@ -1,0 +1,111 @@
+name: Add New Activity
+description: Request to add a new extracurricular activity to the school system
+title: "[ACTIVITY] Add new activity: "
+labels: ["enhancement", "new-activity"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Add New Activity Request
+        
+        Use this template to request adding a new extracurricular activity to the Mergington High School system.
+        
+        **What you need to know:** This will create a new activity that students can view and sign up for on the website.
+
+  - type: input
+    id: activity_name
+    attributes:
+      label: Activity Name
+      description: What should this activity be called?
+      placeholder: e.g., "Robotics Club", "Art Society", "Basketball Team"
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity_description
+    attributes:
+      label: Activity Description
+      description: Write a brief description that students will see. Explain what the activity is about and what students will do.
+      placeholder: e.g., "Learn to build and program robots. Students will work in teams to create robots for competitions and learn about engineering and technology."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: meeting_days
+    attributes:
+      label: Meeting Days
+      description: Which days of the week will this activity meet?
+      multiple: true
+      options:
+        - Monday
+        - Tuesday
+        - Wednesday
+        - Thursday
+        - Friday
+    validations:
+      required: true
+
+  - type: input
+    id: start_time
+    attributes:
+      label: Start Time
+      description: What time does the activity start? (Use format like 3:15 PM or 15:15)
+      placeholder: e.g., "3:15 PM" or "15:15"
+    validations:
+      required: true
+
+  - type: input
+    id: end_time
+    attributes:
+      label: End Time
+      description: What time does the activity end? (Use format like 4:45 PM or 16:45)
+      placeholder: e.g., "4:45 PM" or "16:45"
+    validations:
+      required: true
+
+  - type: input
+    id: max_participants
+    attributes:
+      label: Maximum Number of Students
+      description: How many students can participate in this activity?
+      placeholder: e.g., "15", "20", "unlimited"
+    validations:
+      required: true
+
+  - type: input
+    id: teacher_supervisor
+    attributes:
+      label: Teacher Supervisor
+      description: Which teacher will supervise this activity?
+      placeholder: e.g., "Ms. Johnson", "Mr. Smith"
+    validations:
+      required: true
+
+  - type: textarea
+    id: special_requirements
+    attributes:
+      label: Special Requirements or Notes
+      description: Any special equipment, room requirements, or other important information?
+      placeholder: e.g., "Needs computer lab access", "Requires art supplies", "No special requirements"
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: What should happen when this is completed?
+      description: Check all that apply
+      options:
+        - label: Students can see the new activity on the website
+          required: true
+        - label: Students can sign up for the activity
+          required: true
+        - label: The activity shows the correct schedule and description
+          required: true
+        - label: The system respects the maximum number of participants
+          required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Information
+      description: Anything else that would help implement this request?
+      placeholder: Any other details, special considerations, or questions you have.

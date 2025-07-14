@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Technical Support
+    url: https://github.com/cam-ai-lab/skills-expand-your-team-with-copilot/discussions
+    about: For general questions or technical help with the issue templates
+  - name: Emergency Issues
+    url: mailto:admin@mergington.edu
+    about: For urgent technical problems that prevent using the website

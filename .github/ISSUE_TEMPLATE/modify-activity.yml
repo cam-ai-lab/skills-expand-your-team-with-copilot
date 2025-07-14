@@ -1,0 +1,141 @@
+name: Modify Existing Activity
+description: Request changes to an existing extracurricular activity
+title: "[MODIFY] Update activity: "
+labels: ["enhancement", "modify-activity"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Modify Existing Activity
+        
+        Use this template to request changes to an activity that already exists in the school system.
+        
+        **What you need to know:** This will update the information for an existing activity that students can see and sign up for.
+
+  - type: dropdown
+    id: existing_activity
+    attributes:
+      label: Which Activity Needs Changes?
+      description: Select the activity you want to modify
+      options:
+        - Chess Club
+        - Programming Class
+        - Drama Club
+        - Science Olympiad
+        - Student Council
+        - Art Club
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: other_activity_name
+    attributes:
+      label: Other Activity Name
+      description: If you selected "Other" above, please specify the activity name
+      placeholder: e.g., "Robotics Club"
+
+  - type: checkboxes
+    id: what_to_change
+    attributes:
+      label: What needs to be changed?
+      description: Check all that apply
+      options:
+        - label: Activity name
+        - label: Description
+        - label: Meeting schedule (days/times)
+        - label: Maximum number of participants
+        - label: Teacher supervisor
+        - label: Other (explain below)
+
+  - type: input
+    id: new_activity_name
+    attributes:
+      label: New Activity Name
+      description: If changing the name, what should the new name be?
+      placeholder: e.g., "Advanced Chess Club"
+
+  - type: textarea
+    id: new_description
+    attributes:
+      label: New Description
+      description: If changing the description, write the complete new description here
+      placeholder: Write the full new description that students will see
+
+  - type: dropdown
+    id: new_meeting_days
+    attributes:
+      label: New Meeting Days
+      description: If changing the schedule, which days should it meet?
+      multiple: true
+      options:
+        - Monday
+        - Tuesday
+        - Wednesday
+        - Thursday
+        - Friday
+
+  - type: input
+    id: new_start_time
+    attributes:
+      label: New Start Time
+      description: If changing the schedule, what should the new start time be?
+      placeholder: e.g., "3:15 PM" or "15:15"
+
+  - type: input
+    id: new_end_time
+    attributes:
+      label: New End Time
+      description: If changing the schedule, what should the new end time be?
+      placeholder: e.g., "4:45 PM" or "16:45"
+
+  - type: input
+    id: new_max_participants
+    attributes:
+      label: New Maximum Participants
+      description: If changing the participant limit, what should the new limit be?
+      placeholder: e.g., "20", "unlimited"
+
+  - type: input
+    id: new_teacher_supervisor
+    attributes:
+      label: New Teacher Supervisor
+      description: If changing the supervisor, who should the new supervisor be?
+      placeholder: e.g., "Ms. Johnson"
+
+  - type: textarea
+    id: reason_for_change
+    attributes:
+      label: Why is this change needed?
+      description: Briefly explain the reason for these changes
+      placeholder: e.g., "Need to accommodate more students", "Teacher change", "Schedule conflict"
+    validations:
+      required: true
+
+  - type: textarea
+    id: other_changes
+    attributes:
+      label: Other Changes
+      description: If you checked "Other" above, please describe what else needs to be changed
+      placeholder: Any other modifications needed
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: What should happen when this is completed?
+      description: Check all that apply
+      options:
+        - label: The activity information is updated on the website
+          required: true
+        - label: Students can still sign up for the activity (unless being removed)
+          required: true
+        - label: Existing student sign-ups are preserved (unless participant limit is reduced)
+          required: true
+        - label: The changes are reflected immediately for new visitors
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Information
+      description: Any other details that would help with this change?
+      placeholder: Any special considerations, deadlines, or other important information
