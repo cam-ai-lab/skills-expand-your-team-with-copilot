@@ -1,0 +1,158 @@
+name: Feature Request
+description: Request a new feature or capability for the website
+title: "[FEATURE] New capability: "
+labels: ["enhancement", "feature-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Request
+        
+        Use this template to request new features or capabilities that don't currently exist on the website.
+        
+        **What you need to know:** This is for entirely new functionality - like adding email notifications, reports, or new ways for students to interact with activities.
+
+  - type: textarea
+    id: feature_description
+    attributes:
+      label: What new feature do you want?
+      description: Describe the new capability you'd like to add to the website
+      placeholder: e.g., "Send email reminders to students about their activities", "Generate attendance reports", "Allow students to rate activities"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_solving
+    attributes:
+      label: What problem would this solve?
+      description: Explain why this feature is needed and what current challenge it addresses
+      placeholder: e.g., "Students forget about their activities", "We need to track attendance", "We want student feedback on activities"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user_benefit
+    attributes:
+      label: Who would benefit from this feature?
+      description: Select all groups that would find this feature helpful
+      multiple: true
+      options:
+        - Students
+        - Teachers
+        - School administrators
+        - Parents
+        - Activity supervisors
+    validations:
+      required: true
+
+  - type: textarea
+    id: how_it_should_work
+    attributes:
+      label: How should this feature work?
+      description: Describe how you imagine students or teachers would use this new feature
+      placeholder: |
+        For example:
+        1. Teachers can click a "Send Reminder" button for each activity
+        2. An email is automatically sent to all students signed up for that activity
+        3. The email includes the activity time, location, and any special instructions
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature_type
+    attributes:
+      label: What type of feature is this?
+      description: Select the category that best describes your request
+      options:
+        - Communication (emails, notifications, messages)
+        - Reporting (attendance, participation, statistics)
+        - Data management (import/export, backup, organization)
+        - Student experience (new ways to view or interact with activities)
+        - Teacher tools (management, administrative features)
+        - Integration (connect with other school systems)
+        - Other (describe below)
+    validations:
+      required: true
+
+  - type: input
+    id: other_feature_type
+    attributes:
+      label: Other Feature Type
+      description: If you selected "Other" above, please specify the type of feature
+
+  - type: dropdown
+    id: priority_level
+    attributes:
+      label: How important is this feature?
+      description: This helps prioritize development work
+      options:
+        - High - This would significantly improve our school operations
+        - Medium - This would be a valuable addition
+        - Low - This would be nice to have but isn't urgent
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_workaround
+    attributes:
+      label: How do you currently handle this?
+      description: If you have a manual process or workaround, describe it here
+      placeholder: e.g., "I manually email each student", "We use paper sign-up sheets", "We don't currently track this information"
+
+  - type: textarea
+    id: similar_examples
+    attributes:
+      label: Examples or References
+      description: Are there other websites or systems that have a similar feature you'd like to reference?
+      placeholder: e.g., "Like the reminder system in Google Calendar", "Similar to how Schoology handles assignments"
+
+  - type: input
+    id: estimated_usage
+    attributes:
+      label: How often would this feature be used?
+      description: Estimate how frequently this feature would be needed
+      placeholder: e.g., "Daily", "Weekly", "Monthly", "Once per semester"
+
+  - type: checkboxes
+    id: technical_considerations
+    attributes:
+      label: Technical Requirements (check if applicable)
+      description: Select any technical aspects this feature might need
+      options:
+        - label: Email sending capability
+        - label: File upload/download functionality
+        - label: Integration with school email system
+        - label: Data export (Excel, PDF, etc.)
+        - label: Calendar integration
+        - label: Mobile phone compatibility
+        - label: Parent/guardian access
+        - label: Print-friendly formats
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: What should happen when this feature is completed?
+      description: Check all that apply
+      options:
+        - label: The feature works as described
+          required: true
+        - label: It's easy for teachers to use without technical training
+          required: true
+        - label: It doesn't interfere with existing website functionality
+          required: true
+        - label: Students can use it easily (if applicable)
+          required: true
+
+  - type: textarea
+    id: deadline_considerations
+    attributes:
+      label: Timeline Considerations
+      description: Is there a specific time when this feature would be most valuable?
+      placeholder: e.g., "Before the new school year", "Before activity sign-ups open", "No specific deadline"
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Information
+      description: Any other details, requirements, or considerations for this feature?
+      placeholder: Any special requirements, limitations, or other important context

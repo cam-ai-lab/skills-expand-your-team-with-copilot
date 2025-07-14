@@ -1,0 +1,152 @@
+name: Content Update
+description: Request changes to text, information, or content on the website
+title: "[CONTENT] Update information: "
+labels: ["content", "documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Content Update Request
+        
+        Use this template to request changes to text, information, or other content displayed on the website.
+        
+        **What you need to know:** This is for updating written content like descriptions, instructions, or informational text that students see.
+
+  - type: dropdown
+    id: content_type
+    attributes:
+      label: What type of content needs updating?
+      description: Select what kind of information needs to be changed
+      options:
+        - Website title or header text
+        - Instructions for students (how to sign up, use the site, etc.)
+        - General information about the school or activities program
+        - Contact information
+        - Help or FAQ content
+        - Legal or policy text
+        - Other text content (specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: other_content_type
+    attributes:
+      label: Other Content Type
+      description: If you selected "Other text content" above, please specify what type of content
+
+  - type: dropdown
+    id: content_location
+    attributes:
+      label: Where on the website is this content located?
+      description: Select where students currently see this information
+      options:
+        - Main page header/title area
+        - Main activities listing page
+        - Individual activity pages
+        - Login/account pages
+        - Help or information sections
+        - Footer area
+        - Error or instruction messages
+        - Other location (specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: other_location
+    attributes:
+      label: Other Location
+      description: If you selected "Other location" above, please specify where the content is located
+
+  - type: textarea
+    id: current_content
+    attributes:
+      label: Current Content
+      description: Copy the current text that needs to be changed (if you can find it)
+      placeholder: Copy and paste the existing text here, or describe what it currently says
+    validations:
+      required: true
+
+  - type: textarea
+    id: new_content
+    attributes:
+      label: New Content
+      description: Write the exact text that should replace the current content
+      placeholder: Type the new text exactly as it should appear on the website
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason_for_change
+    attributes:
+      label: Why does this content need to be updated?
+      description: Explain the reason for making this change
+      placeholder: e.g., "Information is outdated", "Students are confused by current wording", "School policy has changed"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency_level
+    attributes:
+      label: How urgent is this update?
+      description: This helps prioritize content changes
+      options:
+        - High - This contains incorrect information that needs immediate correction
+        - Medium - This should be updated soon to avoid confusion
+        - Low - This is an improvement but not time-sensitive
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: content_requirements
+    attributes:
+      label: Content Requirements (check if applicable)
+      description: Select any special requirements for this content
+      options:
+        - label: Must use simple language appropriate for high school students
+        - label: Should match the school's official tone and style
+        - label: Needs to be accessible to students with disabilities
+        - label: Should be kept brief and easy to read
+        - label: Must include specific contact information
+        - label: Should be friendly and welcoming
+
+  - type: textarea
+    id: affected_students
+    attributes:
+      label: Who will see this content?
+      description: Describe which students or users will interact with this updated content
+      placeholder: e.g., "All students using the website", "Students signing up for activities", "Only students with login issues"
+
+  - type: textarea
+    id: style_preferences
+    attributes:
+      label: Style or Tone Preferences
+      description: Any specific preferences for how this content should sound or be formatted?
+      placeholder: e.g., "Keep it casual and friendly", "Use formal school language", "Include bullet points for clarity"
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: What should happen when this content is updated?
+      description: Check all that apply
+      options:
+        - label: The new content appears correctly on the website
+          required: true
+        - label: The content is clear and easy for students to understand
+          required: true
+        - label: All spelling and grammar is correct
+          required: true
+        - label: The content fits well with the overall website design
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Deadline
+      description: Is there a specific date when this content update is needed?
+      placeholder: e.g., "Before October 15th", "As soon as possible", "No specific deadline"
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Information
+      description: Any other details that would help with updating this content?
+      placeholder: Any background information, related changes needed, or other considerations

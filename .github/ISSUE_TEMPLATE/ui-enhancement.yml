@@ -1,0 +1,116 @@
+name: User Interface Enhancement
+description: Request improvements to the website's appearance or user experience
+title: "[UI] Improve website: "
+labels: ["enhancement", "ui-ux"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## User Interface Enhancement Request
+        
+        Use this template to request improvements to how the website looks or works for students.
+        
+        **What you need to know:** This is for changes to the visual design, layout, or how students interact with the website.
+
+  - type: dropdown
+    id: enhancement_type
+    attributes:
+      label: What type of improvement do you want?
+      description: Select the category that best describes your request
+      options:
+        - Make the website look better (colors, fonts, styling)
+        - Make it easier to find activities (search, filtering)
+        - Improve how activities are displayed (layout, organization)
+        - Make it work better on phones/tablets (mobile improvements)
+        - Add helpful information or features for students
+        - Other visual or usability improvement
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_problem
+    attributes:
+      label: What is the current problem?
+      description: Describe what currently bothers you or your students about the website
+      placeholder: e.g., "Students have trouble finding activities that meet on specific days", "The colors are hard to read", "It's difficult to see activity details"
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired_outcome
+    attributes:
+      label: How would you like it to work instead?
+      description: Describe your ideal experience for students using the website
+      placeholder: e.g., "Students should be able to easily filter activities by day", "The text should be easier to read", "Activity information should be clearer"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority_level
+    attributes:
+      label: How important is this improvement?
+      description: This helps prioritize the work
+      options:
+        - High - This significantly impacts student experience
+        - Medium - This would be a nice improvement
+        - Low - This is a minor enhancement
+    validations:
+      required: true
+
+  - type: textarea
+    id: student_feedback
+    attributes:
+      label: Student Feedback
+      description: Have students mentioned any specific issues or suggestions about this?
+      placeholder: e.g., "Students said the text is too small", "Multiple students asked for a search feature"
+
+  - type: dropdown
+    id: affected_pages
+    attributes:
+      label: Which part of the website needs improvement?
+      description: Select all areas that should be changed
+      multiple: true
+      options:
+        - Main activities page (where students see all activities)
+        - Individual activity details
+        - Sign-up process
+        - Login/user account area
+        - Overall website design
+        - Navigation/menu
+        - Mobile phone view
+        - Tablet view
+
+  - type: textarea
+    id: specific_suggestions
+    attributes:
+      label: Specific Ideas or Examples
+      description: If you have specific ideas about colors, layout, or features, describe them here
+      placeholder: e.g., "Use school colors (blue and gold)", "Add a calendar view", "Make buttons bigger", "Show activity images"
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: What should happen when this is completed?
+      description: Check all that apply
+      options:
+        - label: The website is visually improved and easier to use
+          required: true
+        - label: Students can still access all current features
+          required: true
+        - label: The website works properly on computers, phones, and tablets
+          required: true
+        - label: Any new features work as expected
+
+  - type: textarea
+    id: deadline_considerations
+    attributes:
+      label: Timeline or Deadline
+      description: Is there a specific time when this improvement is needed?
+      placeholder: e.g., "Before the new semester starts", "No specific deadline", "Before the next activity sign-up period"
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Information
+      description: Any other details that would help improve the website?
+      placeholder: Any other thoughts, concerns, or requirements

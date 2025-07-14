@@ -1,0 +1,150 @@
+name: Bug Report
+description: Report a problem with the website that needs to be fixed
+title: "[BUG] Something is not working: "
+labels: ["bug", "needs-investigation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+        
+        Use this template to report when something on the website is not working correctly.
+        
+        **What you need to know:** A bug is when the website doesn't work as expected - like broken buttons, missing information, or error messages.
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What went wrong?
+      description: Describe the problem in simple terms. What did you expect to happen vs. what actually happened?
+      placeholder: e.g., "When I click the sign-up button for Chess Club, nothing happens" or "The activity schedule shows the wrong times"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem_area
+    attributes:
+      label: Where on the website did this happen?
+      description: Select the area where you encountered the problem
+      options:
+        - Main activities page (where all activities are listed)
+        - Signing up for an activity
+        - Login/logout process
+        - Viewing activity details
+        - Teacher login area
+        - Search or filtering features
+        - Mobile phone view
+        - Other area (specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: other_area
+    attributes:
+      label: Other Area
+      description: If you selected "Other area" above, please specify where the problem occurred
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: How can someone else see this problem?
+      description: List the steps someone should follow to see the same problem you experienced
+      placeholder: |
+        For example:
+        1. Go to the main activities page
+        2. Click on "Chess Club"
+        3. Click the "Sign Up" button
+        4. The problem happens here
+    validations:
+      required: true
+
+  - type: dropdown
+    id: how_often
+    attributes:
+      label: How often does this happen?
+      description: Does this problem occur every time, or only sometimes?
+      options:
+        - Every time I try
+        - Most of the time
+        - Sometimes
+        - Only happened once
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device_type
+    attributes:
+      label: What device were you using?
+      description: This helps identify if the problem is specific to certain devices
+      options:
+        - Desktop computer
+        - Laptop computer
+        - Tablet (iPad, Android tablet, etc.)
+        - Phone (iPhone, Android phone, etc.)
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser_used
+    attributes:
+      label: What browser were you using?
+      description: Different browsers can sometimes cause different problems
+      options:
+        - Chrome
+        - Safari
+        - Firefox
+        - Edge
+        - Other browser
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: error_messages
+    attributes:
+      label: Did you see any error messages?
+      description: If there were any error messages or pop-ups, copy them here exactly as they appeared
+      placeholder: e.g., "Error 404 - Page not found" or "Something went wrong, please try again"
+
+  - type: dropdown
+    id: impact_level
+    attributes:
+      label: How much does this problem affect using the website?
+      description: This helps prioritize which bugs to fix first
+      options:
+        - Critical - The website or important features don't work at all
+        - High - This makes it very difficult to use important features
+        - Medium - This is annoying but there's a workaround
+        - Low - This is a minor issue that doesn't prevent use
+    validations:
+      required: true
+
+  - type: textarea
+    id: who_affected
+    attributes:
+      label: Who else has experienced this problem?
+      description: Have other teachers or students reported the same issue?
+      placeholder: e.g., "Multiple students mentioned this", "Only I have seen this", "Ms. Johnson also had this problem"
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: What should happen when this bug is fixed?
+      description: Check all that apply
+      options:
+        - label: The problem no longer occurs when following the same steps
+          required: true
+        - label: The feature works as expected
+          required: true
+        - label: No error messages appear
+          required: true
+        - label: The fix doesn't break other parts of the website
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Information
+      description: Any other details that might help fix this problem?
+      placeholder: Any screenshots, additional observations, or other relevant information
